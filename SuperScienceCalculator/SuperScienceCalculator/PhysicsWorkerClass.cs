@@ -17,15 +17,15 @@ namespace SuperScienceCalculator
         private Double CHARGOFELECTRON = -1.6 * 10e-19;         // Charge On Electron.
         private Double ELECTRONMASS = 9.11 * 10e-31;            // Electron Mass.
 
-
-
-
+        // Default Constructor.
         public PhysicsWorkerClass() 
         {
         
         }
 
         //..........................................................................................//
+
+        // Method of type void to calculate momentum.
         public void Momentum()
         {
             Double objectMass = 0.0;
@@ -43,6 +43,7 @@ namespace SuperScienceCalculator
 
         //..........................................................................................//
 
+        // Method of type void to calculate the change of momentum.
         public void ChangeInMomentum()
         {
             Double objectFinallMass = 0.0;
@@ -69,6 +70,29 @@ namespace SuperScienceCalculator
         }
 
         //..........................................................................................//
+
+        public void NewtonsSecondLaw() 
+        {
+            Double changeInTime = 0.0;
+            Double objectFinallMass = 0.0;
+            Double objectFinalVelocity = 0.0;
+
+            Double objectIntialMass = 0.0;
+            Double objectIntialVelocity = 0.0;
+
+            Console.Write("\nEnter the final mass (kg) of your object: ");
+            objectFinallMass = Double.Parse(Console.ReadLine());
+
+            Console.Write("\nEnter the final velocity (m.s) of your object: ");
+            objectFinalVelocity = Double.Parse(Console.ReadLine());
+
+            Console.Write("\nEnter the intial mass (kg) of your object: ");
+            objectIntialMass = Double.Parse(Console.ReadLine());
+
+            Console.Write("\nEnter the intial velocity (m.s) of your object: ");
+            objectIntialVelocity = Double.Parse(Console.ReadLine());
+
+        }
         public Double MomentumCalc(Double mass, Double velocity) => mass * velocity;    // Calculating total Momentum using mass and velocity
 
         public Double MomentumChangeCalc(Double massF, Double velocityF, Double massI, Double velocityI) => (massF * velocityF) + (-1 * (massI * velocityI));    // Calculating total CHange in Momentum using mass and velocity
