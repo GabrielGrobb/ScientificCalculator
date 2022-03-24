@@ -8,7 +8,18 @@ namespace SuperScienceCalculator
 {
     internal class PhysicsWorkerClass
     {
-        
+        //Physical constants
+        private Double ACCELERATION = 9.8;                      // Acceleration Due To Gravity.
+        private Double UNIGRAVCON = 6.67 * 10e-11;              // Universal Gravitational Constant.
+        private Double SPEEDOFLIGHT = 3.0 * 10e11;              // Speed Of Light In A Vaccum.
+        private Double PLNKSCON = 6.63 * 10e-34;                // Planck's Constant.
+        private Double COULBCONS = 9.0 * 10e9;                  // Coulomb's Constant.
+        private Double CHARGOFELECTRON = -1.6 * 10e-19;         // Charge On Electron.
+        private Double ELECTRONMASS = 9.11 * 10e-31;            // Electron Mass.
+
+
+
+
         public PhysicsWorkerClass() 
         {
         
