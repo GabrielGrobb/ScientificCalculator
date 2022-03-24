@@ -33,14 +33,18 @@ namespace SuperScienceCalculator
         //..........................................................................................//
         public void UserDataCapture()
         {
-            Console.WriteLine("\n1. To Calculate Momentum \n2.");
+            Console.WriteLine("\n1. To Calculate Momentum \n2. Newtons 2nd Law/Impulse");
 
             Console.Write("\nWhat would you like to Calculate? Enter a number: ");
             userInput = Console.ReadLine();
 
-            if (userInput.Equals("1")) 
+            if (userInput.Equals("1"))
             {
                 MomentumInput();
+            }
+            else if (userInput.Equals("2")) 
+            {
+                NewtonsSecondLawInput();
             }
         }
 
@@ -71,8 +75,20 @@ namespace SuperScienceCalculator
                 myPysicsWorker.ChangeInMomentum();
 
             }
+        }
+        //..........................................................................................//
 
-            
+        public void NewtonsSecondLawInput() 
+        {
+            Console.WriteLine("\nStatement of Newtons Second Law (general form):\nThe net force acting on an object is equal to the rate of change of momentum.\n");
+            Console.WriteLine("Fnet = [change]p / [change]time\n");
+            Console.WriteLine("Therefore: Fnet x [change]time = [change]p \n");
+            Console.WriteLine("If the mass of the object does not change then:\n");
+            Console.WriteLine("Fnet = Fnet x [change]time = m (Vf - Vi)\n");
+            Console.WriteLine("Fnet = m (Vf - Vi) / [change]time\n");
+            Console.WriteLine("Fnet = ma    (This can only be used if the MASS (m) remains constant WHILE the force is applied)");
+
+
         }
 
     }
